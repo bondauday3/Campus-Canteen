@@ -1,0 +1,29 @@
+{
+  "name": "campuscanteen",
+  "version": "1.0.0",
+  "description": "CampusCanteen – Full Stack Digital College Canteen Ordering System",
+  "main": "server/index.js",
+  "scripts": {
+    "postinstall": "npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"yellow,cyan\" \"node server/index.js\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix client",
+    "start": "node server/index.js",
+    "test-server": "node server/index.js"
+  },
+  "keywords": [
+    "fullstack",
+    "react",
+    "express",
+    "canteen",
+    "college-project"
+  ],
+  "author": "CampusCanteen",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

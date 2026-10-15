@@ -1,0 +1,95 @@
+/* ========================================================
+   CampusCanteen - Global CSS & Design System Tokens
+   ======================================================== */
+
+:root {
+  /* Brand Color Palette */
+  --color-primary: #F97316;
+  --color-primary-hover: #EA580C;
+  --color-primary-light: #FFEDD5;
+  --color-primary-subtle: #FFF7ED;
+  --color-bg: #FFF9F2;
+  --color-card: #FFFFFF;
+  --color-text-main: #1F2937;
+  --color-text-muted: #6B7280;
+  --color-text-light: #9CA3AF;
+  --color-border: #F3E8DC;
+  --color-border-focus: #FDBA74;
+
+  /* Accent Colors */
+  --color-success: #10B981;
+  --color-success-dark: #059669;
+  --color-success-light: #D1FAE5;
+  --color-danger: #EF4444;
+  --color-danger-light: #FEE2E2;
+
+  /* Typography */
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 12px 20px -3px rgba(249, 115, 22, 0.14), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-modal: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+  /* Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}
+
+/* CSS Reset & Defaults */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: var(--color-bg);
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
