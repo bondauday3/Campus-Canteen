@@ -6,6 +6,11 @@ const FALLBACK_FOOD_IMG = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/20
 
 const CATEGORIES = ['All', 'Breakfast', 'Snacks', 'Meals', 'Drinks'];
 
+// Backend API URL: In separated deployment (Vercel frontend + Render backend),
+// Vercel uses VITE_API_BASE_URL. In local dev or unified Render deploy, defaults to relative path ''.
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ? import.meta.env.VITE_API_BASE_URL.replace(/\/$/, '') : '';
+
+
 function App() {
   // 1. Food Menu State
   const [menuItems, setMenuItems] = useState([]);
@@ -50,7 +55,7 @@ function App() {
     setLoadingMenu(true);
     setMenuError(null);
     try {
-      const response = await fetch('/api/menu');
+      const response = await fetch(`${API_BASE_URL}/api/menu`);
       if (!response.ok) {
         throw new Error(`Server returned status ${response.status}`);
       }
@@ -150,7 +155,7 @@ function App() {
         })),
       };
 
-      const response = await fetch('/api/orders', {
+      const response = await fetch(`${API_BASE_URL}/api/orders`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
